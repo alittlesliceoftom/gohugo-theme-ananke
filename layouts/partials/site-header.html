@@ -1,3 +1,5 @@
+{{ $icon_size := "32px" }}
+
 {{ $featured_image := .Param "featured_image"}}
 {{ if $featured_image }}
   {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
@@ -9,10 +11,12 @@
         <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
           {{ .Title | default .Site.Title }}
         </h1>
-        {{ with .Params.description }}
-          <h2 class="fw1 f5 f3-l white-80 measure-wide-l center mt3">
+        {{ with .Params.description }}>
+        <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4" >
+          <a href="https://petition.parliament.uk/petitions/333684"></a>
             {{ . }}
-          </h2>
+          </a>
+        </h2>
         {{ end }}
       </div>
     </div>
@@ -26,9 +30,11 @@
           {{ .Title | default .Site.Title }}
         </h1>
         {{ with .Params.description }}
-          <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+        <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4" >
+          <a href="https://petition.parliament.uk/petitions/333684"></a>
             {{ . }}
-          </h2>
+          </a>
+        </h2>
         {{ end }}
       </div>
     </div>
